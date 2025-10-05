@@ -6,6 +6,20 @@ export default function Document() {
       <Head>
         <meta name="description" content="Find which invoices match your payment instantly. Free invoice payment matcher for contractors, freelancers & service businesses." />
         <meta name="keywords" content="invoice payment matcher, accounts receivable calculator, match invoices to payment, invoice matching tool" />
+        
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BM1WB4JYV"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-4BM1WB4JYV');
+            `,
+          }}
+        />
+        
         <script src="https://cdn.tailwindcss.com"></script>
       </Head>
       <body>
