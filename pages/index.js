@@ -377,8 +377,8 @@ export default function InvoicePaymentMatcher() {
           <p className="mb-2">Free invoice matching tool • No registration required</p>
           <p className="text-xs">
             <a href="/privacy" className="text-blue-400 hover:text-blue-300 transition">Privacy Policy</a> • 
-            <a href="#" className="text-blue-400 hover:text-blue-300 transition ml-2">Terms of Service</a> • 
-            <a href="#" className="text-blue-400 hover:text-blue-300 transition ml-2">Contact</a>
+            <a href="/terms" className="text-blue-400 hover:text-blue-300 transition ml-2">Terms of Service</a> • 
+            <a href="/contact" className="text-blue-400 hover:text-blue-300 transition ml-2">Contact</a>
           </p>
         </div>
       </div>
