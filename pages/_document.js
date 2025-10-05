@@ -21,6 +21,9 @@ export default function Document() {
           }}
         />
         
+        {/* Google AdSense */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6422076189038579" crossorigin="anonymous"></script>
+        
         <script src="https://cdn.tailwindcss.com"></script>
       </Head>
       <body>
