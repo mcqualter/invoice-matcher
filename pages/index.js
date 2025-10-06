@@ -225,6 +225,127 @@ export default function InvoicePaymentMatcher() {
                 <p className="mb-4">
                   Invoice payment matching is the process of determining which specific invoices a customer has paid when they send a payment that doesn't clearly indicate which invoices it covers. This is a common challenge in accounts receivable management that bookkeepers, accountants, and small business owners face daily.
                 </p>
+                <p>
+                  When customers make payments, they often pay multiple invoices at once, skip certain invoices, or pay random combinations. This makes it difficult to know exactly which invoices have been settled without manual trial and error calculations.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-bold text-white mb-3">Why This Tool Solves a Real Problem</h4>
+                <p className="mb-4">
+                  Traditional accounting software like QuickBooks, Xero, and FreshBooks require you to manually match payments to invoices. They don't automatically suggest which combination of outstanding invoices equals your received payment. This means you're left doing mental math or using complicated Excel formulas.
+                </p>
+                <p className="mb-4">
+                  <strong className="text-blue-400">Excel's Solver Add-in</strong> can technically do this, but most people don't know it exists, and it requires technical setup each time you use it. Our tool makes this process instant and accessible to everyone, with no technical knowledge required.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-bold text-white mb-3">How Our Invoice Matcher Works</h4>
+                <p className="mb-4">
+                  Our calculator uses advanced combinatorial algorithms to test every possible combination of your outstanding invoices against the payment amount you received. Here's what happens when you click "Find Matches":
+                </p>
+                <ul className="list-disc list-inside space-y-2 mb-4 ml-4">
+                  <li><strong className="text-white">Exact Match Detection:</strong> The tool finds all combinations of invoices that exactly match (or come very close to) your payment amount</li>
+                  <li><strong className="text-white">Best Match Ranking:</strong> Results are sorted by accuracy and fewest invoices, so you see the most likely scenario first</li>
+                  <li><strong className="text-white">Multiple Options:</strong> If several combinations match, we show you up to 5 possibilities so you can choose the right one</li>
+                  <li><strong className="text-white">Oldest First Fallback:</strong> When no exact match exists, we automatically show how the payment would be allocated using the standard "oldest invoice first" accounting method</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-bold text-white mb-3">Common Use Cases for Payment Matching</h4>
+                <p className="mb-3"><strong className="text-white">Scenario 1: Customer Pays Multiple Invoices</strong></p>
+                <p className="mb-4">
+                  A customer receives invoices for $1,250, $750, $2,100, and $450. They send a payment of $3,350. Which invoices did they pay? Our tool instantly shows you: Invoice #1 ($1,250) + Invoice #2 ($750) + Invoice #3 ($2,100) + Invoice #4 ($450) = $3,350.
+                </p>
+                
+                <p className="mb-3"><strong className="text-white">Scenario 2: Customer Skips Invoices</strong></p>
+                <p className="mb-4">
+                  A customer has outstanding invoices but decides to pay only certain ones, skipping others (maybe they're disputing one). They send a payment that doesn't equal the total. Our tool helps you identify which specific invoices they intended to pay.
+                </p>
+
+                <p className="mb-3"><strong className="text-white">Scenario 3: Partial Payments</strong></p>
+                <p className="mb-4">
+                  When a payment doesn't match any combination of invoices, our oldest-first allocation shows you how to apply the payment: which invoices get paid in full, which receive partial payment, and what remains outstanding.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-bold text-white mb-3">Benefits of Using This Tool</h4>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+                    <h5 className="font-bold text-white mb-2">⚡ Save Time</h5>
+                    <p className="text-sm">No more manual calculations or trial and error. Get instant results in seconds.</p>
+                  </div>
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+                    <h5 className="font-bold text-white mb-2">✓ Improve Accuracy</h5>
+                    <p className="text-sm">Eliminate human error in payment allocation and invoice matching.</p>
+                  </div>
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+                    <h5 className="font-bold text-white mb-2">📊 Better Cash Flow Management</h5>
+                    <p className="text-sm">Know exactly which invoices are paid and which remain outstanding.</p>
+                  </div>
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+                    <h5 className="font-bold text-white mb-2">💼 Professional Results</h5>
+                    <p className="text-sm">Present clear, accurate payment allocations to clients and management.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-bold text-white mb-3">Tips for Managing Invoice Payments</h4>
+                <ol className="list-decimal list-inside space-y-3 ml-4">
+                  <li className="text-white"><strong>Always list invoices oldest first</strong> - This matches standard accounting practice and makes reconciliation easier</li>
+                  <li className="text-white"><strong>Include invoice numbers or dates</strong> - When communicating with customers, reference specific invoice numbers to avoid confusion</li>
+                  <li className="text-white"><strong>Set clear payment terms</strong> - Specify which invoices should be paid in what order to prevent mismatches</li>
+                  <li className="text-white"><strong>Follow up on partial payments</strong> - If a payment doesn't match, contact the customer immediately to clarify their intent</li>
+                  <li className="text-white"><strong>Keep detailed records</strong> - Document how you allocated each payment for audit purposes</li>
+                </ol>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-bold text-white mb-3">Frequently Asked Questions</h4>
+                
+                <div className="space-y-4">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10">
+                    <h5 className="font-bold text-white mb-2">Can I use this for multiple currencies?</h5>
+                    <p className="text-sm">Yes! Just enter the amounts in your currency. The tool works with any currency as long as all amounts are in the same one.</p>
+                  </div>
+
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10">
+                    <h5 className="font-bold text-white mb-2">What if there are many possible combinations?</h5>
+                    <p className="text-sm">We show you the top 5 best matches, ranked by accuracy and fewest invoices. The first option is usually the most likely scenario.</p>
+                  </div>
+
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10">
+                    <h5 className="font-bold text-white mb-2">Is my data saved or stored anywhere?</h5>
+                    <p className="text-sm">No! All calculations happen in your browser. Nothing is sent to our servers. Your financial data stays completely private.</p>
+                  </div>
+
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10">
+                    <h5 className="font-bold text-white mb-2">How accurate is the matching?</h5>
+                    <p className="text-sm">We allow a tolerance of $0.01 to account for rounding differences. Matches within one cent are considered exact.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30">
+                <h4 className="text-xl font-bold text-white mb-3">Ready to Try Better Accounting Software?</h4>
+                <p className="mb-4">
+                  While our free tool is great for quick invoice matching, full-featured accounting software can automate your entire accounts receivable process, including automated payment reminders, aging reports, and integrated banking.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <a href="#" className="inline-block px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition">
+                    Try QuickBooks Free
+                  </a>
+                  <a href="#" className="inline-block px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-xl transition">
+                    Try Xero Free
+                  </a>
+                  <a href="#" className="inline-block px-6 py-3 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-xl transition">
+                    Try FreshBooks Free
+                  </a>
+                </div>
               </div>
             </div>
           )}
@@ -260,15 +381,22 @@ export default function InvoicePaymentMatcher() {
                   
                   <div className="space-y-4">
                     {results.matches.map((match, matchIndex) => (
-                      <div key={matchIndex} className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-sm border-2 border-green-400/30 rounded-2xl p-6">
+                      <div key={matchIndex} className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-sm border-2 border-green-400/30 rounded-2xl p-6 hover:border-green-400/50 transition-all">
                         <div className="flex justify-between items-center mb-4">
                           <h3 className="font-bold text-white text-lg">
                             {results.matches.length > 1 && `Option ${matchIndex + 1}: `}
                             {match.invoices.length} Invoice{match.invoices.length > 1 ? 's' : ''}
                           </h3>
-                          <span className="text-3xl font-bold text-green-400">
-                            ${match.total.toFixed(2)}
-                          </span>
+                          <div className="text-right">
+                            <span className="text-3xl font-bold text-green-400">
+                              ${match.total.toFixed(2)}
+                            </span>
+                            {match.difference > 0 && (
+                              <span className="block text-xs text-green-300">
+                                (±${match.difference.toFixed(2)})
+                              </span>
+                            )}
+                          </div>
                         </div>
                         <div className="grid gap-3">
                           {match.invoices.map((invoice) => (
@@ -278,6 +406,11 @@ export default function InvoicePaymentMatcher() {
                             </div>
                           ))}
                         </div>
+                        {matchIndex === 0 && (
+                          <div className="mt-4 p-3 bg-green-400/20 backdrop-blur-sm rounded-xl text-center border border-green-400/30">
+                            <span className="text-sm font-bold text-green-300">⭐ Best Match (Fewest Invoices)</span>
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -299,6 +432,7 @@ export default function InvoicePaymentMatcher() {
                   <TrendingUp className="w-6 h-6 text-blue-400" />
                   <h2 className="text-2xl font-bold text-white">Oldest First Allocation</h2>
                 </div>
+                <p className="text-sm text-gray-400 mb-6">Payment applied to invoices in order received</p>
                 
                 <div className="space-y-3">
                   {results.oldestFirst.allocated.map((invoice) => (
@@ -338,6 +472,14 @@ export default function InvoicePaymentMatcher() {
                     </div>
                   ))}
                 </div>
+
+                {results.oldestFirst.remaining > 0 && (
+                  <div className="mt-6 p-5 bg-blue-500/20 backdrop-blur-sm border-2 border-blue-400/30 rounded-2xl">
+                    <p className="text-blue-200">
+                      <span className="font-bold">Credit Balance:</span> ${results.oldestFirst.remaining.toFixed(2)}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
